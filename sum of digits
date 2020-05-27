@@ -1,0 +1,16 @@
+#include<stdio.h>
+int Digitsum(int num);
+int main()
+{
+int sum,num;
+printf("Enter the number to find the sum of the given digits");
+scanf("%d",&num);
+sum=Digitsum(num);
+printf("sum of digit =%d");
+return 0;
+}
+int Digitsum(int num)
+{ if(num==0)
+return 0;
+return((num%10)+Digitsum(num/10));
+}
